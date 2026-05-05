@@ -1,0 +1,216 @@
+Windows Registry Editor Version 5.00
+
+; ============================================================
+; Microsoft Edge Policies - COMPLETE CONSOLIDATION
+; Includes all policies from both files PLUS:
+; - Homepage = https://google.com
+; - Google as default search engine (explicitly reinforced)
+; Run as Administrator to apply
+; ============================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
+
+; ----- Original Policies -----
+"EnableDoNotTrack"=dword:00000001
+"MetricsReportingEnabled"=dword:00000000
+"SafeBrowsing"=dword:00000002
+"SafeBrowsingExtendedReportingEnabled"=dword:00000000
+"ShowHomeButton"=dword:00000001
+"WebRTC"=dword:00000000
+"NetworkPredictionOptions"=dword:00000002
+"TranslateEnabled"=dword:00000000
+"NewTabPage"=dword:00000000
+"Extensions"=dword:00000000
+"WalletServiceEnabled"=dword:00000000
+"BlockThirdPartyCookies"=dword:00000001
+"PasswordManagerEnabled"=dword:00000000
+"AutoFillCreditCardEnabled"=dword:00000000
+"BackgroundModeEnabled"=dword:00000000
+"StartupBoostEnabled"=dword:00000000
+"DefaultBrowserSettingEnabled"=dword:00000000
+
+; ----- Homepage (YOUR REQUEST) -----
+"HomepageLocation"="https://google.com"
+"HomepageIsNewTabPage"=dword:00000000
+
+; ----- Default Search Engine (Google - YOUR REQUEST - reinforced) -----
+"DefaultSearchProviderEnabled"=dword:00000001
+"DefaultSearchProviderName"="Google"
+"DefaultSearchProviderSearchURL"="https://www.google.com/search?q={searchTerms}"
+"DefaultSearchProviderSuggestURL"="https://www.google.com/complete/search?q={searchTerms}"
+"DefaultSearchProviderNewTabURL"="https://www.google.com/"
+
+; ----- First Run & Onboarding (from new file) -----
+"HideFirstRunExperience"=dword:00000001
+"AutoImportAtFirstRun"=dword:00000004
+"PromotionalTabsEnabled"=dword:00000000
+"GuidedSwitchEnabled"=dword:00000000
+"MicrosoftEdgeInsiderPromotionEnabled"=dword:00000000
+
+; ----- Privacy & Tracking (from new file - merged) -----
+"ConfigureDoNotTrack"=dword:00000001
+"TrackingPrevention"=dword:00000003
+"DiagnosticData"=dword:00000000
+"PersonalizationReportingEnabled"=dword:00000000
+"Edge3PSerpTelemetryEnabled"=dword:00000000
+"ExperimentationAndConfigurationServiceControl"=dword:00000000
+"RelatedWebsiteSetsEnabled"=dword:00000000
+
+; ----- DNS over HTTPS (from new file) -----
+"DnsOverHttpsMode"="secure"
+"DnsOverHttpsTemplates"="https://dns.quad9.net/dns-query{?dns} https://cloudflare-dns.com/dns-query{?dns}"
+"BuiltInDnsClientEnabled"=dword:00000000
+
+; ----- Security (from new file) -----
+"HttpsOnlyMode"="force_enabled"
+"TyposquattingCheckerEnabled"=dword:00000000
+"RemoteDebuggingAllowed"=dword:00000000
+"ResolveNavigationErrorsUseWebService"=dword:00000000
+"AlternateErrorPagesEnabled"=dword:00000000
+
+; ----- Passwords & Autofill (from new file - merged) -----
+"PasswordMonitorAllowed"=dword:00000000
+"PasswordGeneratorEnabled"=dword:00000000
+"PasswordDismissCompromisedAlertEnabled"=dword:00000000
+"PasswordProtectionWarningTrigger"=dword:00000000
+"AutofillAddressEnabled"=dword:00000000
+"AutofillMembershipsEnabled"=dword:00000000
+"PaymentMethodQueryEnabled"=dword:00000000
+
+; ----- Search (from new file - adjusted) -----
+"NewTabPageSearchBox"="redirect"
+"SearchSuggestEnabled"=dword:00000000
+"AddressBarTrendingSuggestEnabled"=dword:00000000
+"AddressBarWorkSearchResultsEnabled"=dword:00000000
+"SearchInSidebarEnabled"=dword:00000002
+"SearchbarAllowed"=dword:00000000
+"SearchbarIsEnabledOnStartup"=dword:00000000
+"SearchFiltersEnabled"=dword:00000000
+"SearchForImageEnabled"=dword:00000000
+"QuickSearchShowMiniMenu"=dword:00000000
+
+; ----- New Tab Page (from new file) -----
+"NewTabPageLocation"="https://google.com"
+"NewTabPageHideDefaultTopSites"=dword:00000001
+"NewTabPageContentEnabled"=dword:00000000
+"NewTabPageAllowedBackgroundTypes"=dword:00000003
+"NewTabPageAppLauncherEnabled"=dword:00000000
+"NewTabPageBingChatEnabled"=dword:00000000
+"NewTabPagePrerenderEnabled"=dword:00000000
+"NewTabPageQuickLinksEnabled"=dword:00000000
+
+; ----- Copilot & AI (from new file) -----
+"BuiltInAIAPIsEnabled"=dword:00000000
+"CopilotPageContext"=dword:00000000
+"CopilotPageContextEnabled"=dword:00000000
+"EdgeEntraCopilotPageContext"=dword:00000000
+"Microsoft365CopilotChatIconEnabled"=dword:00000000
+"AIGenThemesEnabled"=dword:00000000
+"GenAILocalFoundationalModelSettings"=dword:00000001
+"ComposeInlineEnabled"=dword:00000000
+"EdgeHistoryAISearchEnabled"=dword:00000000
+
+; ----- UI & Sidebar (from new file) -----
+"FavoritesBarEnabled"=dword:00000001
+"HubsSidebarEnabled"=dword:00000000
+"StandaloneHubsSidebarEnabled"=dword:00000000
+"EdgeCollectionsEnabled"=dword:00000000
+"PinBrowserEssentialsToolbarButton"=dword:00000000
+"PinningWizardAllowed"=dword:00000000
+"SplitScreenEnabled"=dword:00000000
+"TabServicesEnabled"=dword:00000000
+"PersonalizeTopSitesInCustomizeSidebarEnabled"=dword:00000000
+"SpotlightExperiencesAndRecommendationsEnabled"=dword:00000000
+"ShowRecommendationsEnabled"=dword:00000000
+"ShowAcrobatSubscriptionButton"=dword:00000000
+"ShowPDFDefaultRecommendationsEnabled"=dword:00000000
+"ShowMicrosoftRewards"=dword:00000000
+"ShowOfficeShortcutInFavoritesBar"=dword:00000000
+"DisableScreenshots"=dword:00000000
+"AskBeforeCloseEnabled"=dword:00000000
+
+; ----- Shopping & Wallet (from new file) -----
+"ShoppingListEnabled"=dword:00000000
+"EdgeShoppingAssistantEnabled"=dword:00000000
+"EdgeWalletCheckoutEnabled"=dword:00000000
+"EdgeWalletEtreeEnabled"=dword:00000000
+"WalletDonationEnabled"=dword:00000000
+"BingAdsSuppression"=dword:00000001
+
+; ----- Profile & Sync (from new file - merged) -----
+"SyncDisabled"=dword:00000000
+"BrowserSignin"=dword:00000001
+"BrowserAddProfileEnabled"=dword:00000000
+"BrowserGuestModeEnabled"=dword:00000000
+"NonRemovableProfileEnabled"=dword:00000000
+"EdgeDefaultProfileEnabled"="Default"
+"RoamingProfileSupportEnabled"=dword:00000000
+"ImportOnEachLaunch"=dword:00000000
+"ImplicitSignInEnabled"=dword:00000000
+"ProactiveAuthWorkflowEnabled"=dword:00000000
+"SeamlessWebToBrowserSignInEnabled"=dword:00000000
+"WebToBrowserSignInEnabled"=dword:00000000
+"AADWebSSOAllowed"=dword:00000000
+"AADWebSiteSSOUsingThisProfileEnabled"=dword:00000000
+"MSAWebSiteSSOUsingThisProfileAllowed"=dword:00000000
+"ConfigureOnPremisesAccountAutoSignIn"=dword:00000000
+"MAMEnabled"=dword:00000000
+
+; ----- Permissions (from new file) -----
+"DefaultNotificationsSetting"=dword:00000002
+"AllowSystemNotifications"=dword:00000000
+"AutoplayAllowed"=dword:00000000
+"LiveCaptionsAllowed"=dword:00000000
+"SpeechRecognitionEnabled"=dword:00000000
+"LiveVideoTranslationEnabled"=dword:00000000
+"UploadFromPhoneEnabled"=dword:00000000
+"LocalBrowserDataShareEnabled"=dword:00000000
+"SharedLinksEnabled"=dword:00000000
+
+; ----- Misc Edge features (from new file) -----
+"AllowGamesMenu"=dword:00000000
+"ReadAloudEnabled"=dword:00000000
+"WebCaptureEnabled"=dword:00000000
+"QRCodeGeneratorEnabled"=dword:00000000
+"VisualSearchEnabled"=dword:00000000
+"WebWidgetAllowed"=dword:00000000
+"EdgeWorkspacesEnabled"=dword:00000000
+"EdgeManagementEnabled"=dword:00000000
+"EdgeAdminCenterEnabled"=dword:00000000
+"EdgeAssetDeliveryServiceEnabled"=dword:00000000
+"EdgeAutofillMlEnabled"=dword:00000000
+"EdgeEDropEnabled"=dword:00000000
+"AdsTransparencyEnabled"=dword:00000000
+"InAppSupportEnabled"=dword:00000000
+"UserFeedbackAllowed"=dword:00000000
+"ExtensionsPerformanceDetectorEnabled"=dword:00000000
+"PerformanceDetectorEnabled"=dword:00000000
+"HighEfficiencyModeEnabled"=dword:00000000
+"QuickViewOfficeFilesEnabled"=dword:00000000
+"TextPredictionEnabled"=dword:00000000
+"MicrosoftEditorProofingEnabled"=dword:00000000
+"MicrosoftEditorSynonymsEnabled"=dword:00000000
+"SpellcheckEnabled"=dword:00000000
+"MouseGestureEnabled"=dword:00000000
+"FamilySafetySettingsEnabled"=dword:00000000
+"ClickOnceEnabled"=dword:00000000
+"ConfigureOnlineTextToSpeech"=dword:00000000
+"ConfigureShare"=dword:00000000
+"HideInternetExplorerRedirectUXForIncompatibleSitesEnabled"=dword:00000001
+"InternetExplorerIntegrationLevel"=dword:00000000
+"InternetExplorerIntegrationReloadInIEModeAllowed"=dword:00000000
+"ApplicationGuardFavoritesSyncEnabled"=dword:00000000
+"ApplicationGuardTrafficIdentificationEnabled"=dword:00000000
+"AccessibilityImageLabelsEnabled"=dword:00000000
+
+; ----- Startup & Background (original + new) -----
+"DefaultBrowserSettingsCampaignEnabled"=dword:00000000
+
+; ----- Extensions blocklist (from new file) -----
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist]
+"1"="*"
+
+; ----- Recommended Policies (from new file) -----
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\Recommended]
+"BackgroundModeEnabled"=dword:00000000
+"StartupBoostEnabled"=dword:00000000

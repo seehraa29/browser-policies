@@ -1,0 +1,70 @@
+Windows Registry Editor Version 5.00
+
+; ============================================================
+; Brave Browser Policies
+; Run as Administrator to apply
+; ============================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\BraveSoftware\Brave]
+; ----- Brave-specific features -----
+"BraveP3AEnabled"="Disabled"
+"BraveStatsPingEnabled"=dword:00000000
+"BraveWebDiscoveryEnabled"=dword:00000000
+"BraveNewsDisabled"=dword:00000001
+"BraveWaybackMachineEnabled"=dword:00000000
+"BraveAIChatEnabled"=dword:00000000
+"BraveRewardsDisabled"=dword:00000001
+"BraveWalletDisabled"=dword:00000001
+"BraveTalkDisabled"="Disabled"
+"BraveVPNDisabled"=dword:00000001
+"TorDisabled"=dword:00000001
+"BraveSpeedreaderEnabled"=dword:00000000
+"BravePlaylistEnabled"=dword:00000000
+"ShowSidebarButtonEnabled"=dword:00000000
+
+; ----- Privacy & Security -----
+"SafeBrowsingProtectionLevel"=dword:00000002
+"BlockThirdPartyCookies"=dword:00000001
+"AlternateErrorPagesEnabled"=dword:00000000
+"NetworkPredictionOptions"=dword:00000002
+"TranslateEnabled"=dword:00000000
+
+; ----- DNS over HTTPS -----
+"BuiltInDnsClientEnabled"=dword:00000001
+"DnsOverHttpsMode"="secure"
+"DnsOverHttpsTemplates"="https://dns.quad9.net/dns-query{?dns} https://cloudflare-dns.com/dns-query{?dns}"
+
+; ----- Permissions -----
+"DefaultNotificationsSetting"=dword:00000002
+"DefaultGeolocationSetting"=dword:00000002
+"DefaultPopupsSetting"=dword:00000002
+
+; ----- Passwords & Autofill -----
+"PasswordManagerEnabled"=dword:00000000
+"AutofillAddressEnabled"=dword:00000001
+"AutofillCreditCardEnabled"=dword:00000000
+
+; ----- Search -----
+"SearchSuggestEnabled"=dword:00000000
+"DefaultSearchProviderEnabled"=dword:00000001
+"DefaultSearchProviderName"="Google"
+"DefaultSearchProviderSearchURL"="https://www.google.com/search?q={searchTerms}"
+"DefaultSearchProviderSuggestURL"="https://www.google.com/complete/search?q={searchTerms}"
+"DefaultSearchProviderNewTabURL"="https://www.google.com/"
+
+; ----- New Tab Page -----
+"NewTabPageContentEnabled"=dword:00000000
+"NewTabPageHideDefaultTopSites"=dword:00000001
+
+; ----- Extensions -----
+"ExtensionInstallBlocklist"="[*]"
+
+; ----- Sync & Startup -----
+"SyncDisabled"=dword:00000000
+"BackgroundModeEnabled"=dword:00000000
+"StartupBoostEnabled"=dword:00000000
+"DefaultBrowserSettingEnabled"=dword:00000000
+
+; ----- Extension Blocklist (subkey form) -----
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\BraveSoftware\Brave\ExtensionInstallBlocklist]
+"1"="*"

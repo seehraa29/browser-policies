@@ -1,0 +1,49 @@
+Windows Registry Editor Version 5.00
+
+; ============================================================
+; Google Chrome Policies
+; Run as Administrator to apply
+; ============================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome]
+; ----- Privacy & Tracking -----
+"EnableDoNotTrack"=dword:00000001
+"MetricsReportingEnabled"=dword:00000000
+"SafeBrowsingProtectionLevel"=dword:00000002
+"SafeBrowsingExtendedReportingEnabled"=dword:00000000
+"BlockThirdPartyCookies"=dword:00000001
+"AlternateErrorPagesEnabled"=dword:00000000
+"NetworkPredictionOptions"=dword:00000002
+"TranslateEnabled"=dword:00000000
+"NTPContentSuggestionsEnabled"=dword:00000000
+
+; ----- DNS over HTTPS -----
+"DnsOverHttpsMode"="secure"
+"DnsOverHttpsTemplates"="https://dns.quad9.net/dns-query{?dns} https://cloudflare-dns.com/dns-query{?dns}"
+
+; ----- Passwords & Autofill -----
+"PasswordManagerEnabled"=dword:00000000
+"AutofillAddressEnabled"=dword:00000001
+"AutofillCreditCardEnabled"=dword:00000000
+"WalletServiceEnabled"=dword:00000000
+
+; ----- Search -----
+"SearchSuggestEnabled"=dword:00000000
+"DefaultSearchProviderEnabled"=dword:00000001
+"DefaultSearchProviderName"="Google"
+"DefaultSearchProviderSearchURL"="https://www.google.com/search?q={searchTerms}"
+"DefaultSearchProviderSuggestURL"="https://www.google.com/complete/search?q={searchTerms}"
+"DefaultSearchProviderNewTabURL"="https://www.google.com/"
+
+; ----- UI -----
+"ShowHomeButton"=dword:00000001
+
+; ----- Sync & Startup -----
+"SyncDisabled"=dword:00000000
+"BackgroundModeEnabled"=dword:00000000
+"StartupBoostEnabled"=dword:00000000
+"DefaultBrowserSettingEnabled"=dword:00000000
+
+; ----- Extensions (subkey form) -----
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\ExtensionInstallBlocklist]
+"1"="*"
