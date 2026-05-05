@@ -9,17 +9,21 @@ For Firefox, the policy has to be applied with a BAT file in Windows.
 
 For Linux environments, use the shell scripts.
 
-apply_brave_policies.reg
-apply_brave_policies.sh
-
-apply_chrome_policies.reg
-apply_chrome_policies.sh
-
-apply_edge_policies.reg
-apply_edge_policies.sh
-
-apply_firefox_policies.bat
-apply_firefox_policies.sh
+  apply_brave_policies.reg
+  
+  apply_brave_policies.sh
+  
+  apply_chrome_policies.reg
+  
+  apply_chrome_policies.sh
+  
+  apply_edge_policies.reg
+  
+  apply_edge_policies.sh
+  
+  apply_firefox_policies.bat
+  
+  apply_firefox_policies.sh
 
 ### DNS Settings
 
@@ -33,5 +37,6 @@ These should work but if you want a different DNS provier, you can add to this o
 
 Removing the policy can be done by running the scripts below and passing in "brave", "chrome", "edge" or "firefox" as a parameter.
 
-remove_browser_policies.bat
-remove_browser_policies.sh
+  remove_browser_policies.bat
+  
+  remove_browser_policies.sh
