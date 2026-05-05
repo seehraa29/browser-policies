@@ -1,10 +1,6 @@
 Windows Registry Editor Version 5.00
 
 ; ============================================================
-; Microsoft Edge Policies - COMPLETE CONSOLIDATION
-; Includes all policies from both files PLUS:
-; - Homepage = https://google.com
-; - Google as default search engine (explicitly reinforced)
 ; Run as Administrator to apply
 ; ============================================================
 
