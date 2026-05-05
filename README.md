@@ -21,6 +21,14 @@ apply_edge_policies.sh
 apply_firefox_policies.bat
 apply_firefox_policies.sh
 
+### DNS Settings
+
+The DNS chosen are templates, you can amend them to your own privacy focused provider by amending lines like these
+
+"DnsOverHttpsTemplates"="https://dns.quad9.net/dns-query{?dns} https://cloudflare-dns.com/dns-query{?dns}",
+
+These should work but if you want a different DNS provier, you can add to this or replace it all with whatever you like.
+
 ### Removing Policy
 
 Removing the policy can be done by running the scripts below and passing in "brave", "chrome", "edge" or "firefox" as a parameter.
