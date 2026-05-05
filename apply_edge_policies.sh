@@ -2,7 +2,6 @@
 # ============================================================
 #  Microsoft Edge Policy Applicator (Linux)
 #  Supports: system (apt/dnf) and Flatpak installs
-#  Validated against Edge 148/149 policy schema
 # ============================================================
 
 set -euo pipefail
